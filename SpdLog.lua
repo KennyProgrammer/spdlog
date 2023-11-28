@@ -2,15 +2,17 @@
 -- Premake5 file for build SpdLog project.
 -- Copyright (c) 2019-2023 by Danil (Kenny) Dukhovenko, All rights reserved.
 --
+-- Requirement:
+--  - ForceEngine.lua
 
 -- SpdLog C++ Project
-project "ImGuizmo"
+project "SpdLog"
 	kind          "StaticLib"
 	language      "C++"
 	cppdialect    "C++17"
 	staticruntime "On"
-	targetdir     ("%{ForceDir.BinLib}/" .. BuildDir .. "/%{prj.name}/lib")
-	objdir        ("%{ForceDir.BinLib}/" .. BuildDir .. "/%{prj.name}/obj")
+	targetdir     ("%{ForceDir.BinLib}/" .. BuildDir .. "/%{prj.name}/Lib")
+	objdir        ("%{ForceDir.BinLib}/" .. BuildDir .. "/%{prj.name}/Obj")
 
 	files {
 		"include/**.h",
